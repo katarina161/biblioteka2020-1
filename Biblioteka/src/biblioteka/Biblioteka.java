@@ -1,8 +1,16 @@
 package biblioteka;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import biblioteka.interfejs.BibliotekaInterfejs;
 
@@ -100,14 +108,25 @@ public class Biblioteka implements BibliotekaInterfejs {
 
 	@Override
 	public void upisJSON(String fileName) {
-		// TODO Auto-generated method stub
-		
+		try(FileWriter out = new FileWriter(fileName)) {
+			Gson gson = new GsonBuilder().setPrettyPrinting().create();
+			
+			gson.toJson(knjige, out);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override
 	public void citanjeJSON(String fileName) {
-		// TODO Auto-generated method stub
-		
+		try(FileReader in = new FileReader(fileName)) {
+			Gson gson = new Gson();
+			Type collectionType = new TypeToken<LinkedList<Biblioteka>>(){}.getType();
+			
+			knjige.clear();
+			knjige = gson.fromJson(in, collectionType);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
-
 }
