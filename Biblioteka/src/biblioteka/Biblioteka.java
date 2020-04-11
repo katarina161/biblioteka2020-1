@@ -98,4 +98,16 @@ public class Biblioteka implements BibliotekaInterfejs {
 		return rezultat;
 	}
 
+	@Override
+	public void upisJSON(String fileName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void citanjeJSON(String fileName) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
