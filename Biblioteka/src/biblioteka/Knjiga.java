@@ -10,6 +10,19 @@ import java.util.LinkedList;
  */
 public class Knjiga {
 	
+	public Knjiga() {
+		
+	}
+	
+	public Knjiga(String naslov, String isbn, LinkedList<Autor> autori,  
+			String izdavac, int izdanje) {
+		this.naslov = naslov;
+		this.isbn = isbn;
+		this.autori = autori;
+		this.izdavac = izdavac;
+		this.izdanje = izdanje;
+	}
+	
 	/**
 	 * Naslov knjige
 	 */

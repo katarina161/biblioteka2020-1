@@ -121,7 +121,7 @@ public class Biblioteka implements BibliotekaInterfejs {
 	public void citanjeJSON(String fileName) {
 		try(FileReader in = new FileReader(fileName)) {
 			Gson gson = new Gson();
-			Type collectionType = new TypeToken<LinkedList<Biblioteka>>(){}.getType();
+			Type collectionType = new TypeToken<LinkedList<Knjiga>>(){}.getType();
 			
 			knjige.clear();
 			knjige = gson.fromJson(in, collectionType);

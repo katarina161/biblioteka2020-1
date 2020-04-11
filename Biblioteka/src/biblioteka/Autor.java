@@ -8,6 +8,15 @@ package biblioteka;
  */
 public class Autor {
 	
+	public Autor() {
+		
+	}
+	
+	public Autor(String ime, String prezime) {
+		this.ime = ime;
+		this.prezime = prezime;
+	}
+	
 	/**
 	 * Ime autora
 	 */

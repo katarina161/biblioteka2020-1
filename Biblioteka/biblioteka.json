@@ -1,0 +1,30 @@
+[
+  {
+    "naslov": "The Talisman",
+    "isbn": "978-0-670-69199-9",
+    "autori": [
+      {
+        "ime": "Stephen",
+        "prezime": "King"
+      },
+      {
+        "ime": "Peter",
+        "prezime": "Straub"
+      }
+    ],
+    "izdavac": "Viking",
+    "izdanje": 13
+  },
+  {
+    "naslov": "The Alchemist",
+    "isbn": "0-06-250217-4",
+    "autori": [
+      {
+        "ime": "Paulo",
+        "prezime": "Coelho"
+      }
+    ],
+    "izdavac": "HarperTorch",
+    "izdanje": 1
+  }
+]
